@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Phone, MapPin, Clock, Instagram, Facebook, Twitter } from 'lucide-react';
 
@@ -8,9 +7,11 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-6">
-              <span className="text-panther-gold">PANTHER</span> FITNESS
-            </h3>
+            <img 
+              src="/lovable-uploads/28bc6d47-8f2d-4667-be16-77d9b9b327bf.png" 
+              alt="Panther Fitness Logo" 
+              className="h-16 w-auto mb-4"
+            />
             <p className="text-gray-300 mb-4">
               Premium fitness facilities with two convenient locations in Bangalore.
               Experience top-quality equipment and exceptional service.

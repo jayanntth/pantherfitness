@@ -30,7 +30,7 @@ const Header = () => {
           <img 
             src="/lovable-uploads/28bc6d47-8f2d-4667-be16-77d9b9b327bf.png" 
             alt="Panther Fitness Logo" 
-            className="h-12 w-auto"
+            className="h-16 w-auto"
           />
         </Link>
 

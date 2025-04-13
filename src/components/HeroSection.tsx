@@ -22,7 +22,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 h-full flex flex-col justify-center relative z-20">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Transform Your Body at <span className="text-panther-gold">PANTHER FITNESS</span>
+            THE STRENGTHENING <span className="text-panther-gold">POWER HOUSE</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
             Premium gym facilities at two convenient locations in Bangalore.

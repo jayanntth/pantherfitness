@@ -1,5 +1,6 @@
+
 import { Link } from 'react-router-dom';
-import { Phone, MapPin, Clock, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Phone, MapPin, Clock, Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -17,14 +18,17 @@ const Footer = () => {
               Experience top-quality equipment and exceptional service.
             </p>
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-white hover:text-panther-gold transition-colors">
+              <a href="https://www.instagram.com/pantherfitness_1?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white hover:text-panther-gold transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-white hover:text-panther-gold transition-colors">
+              <a href="https://www.facebook.com/people/Panther-Fitness-1/100090202668999/#" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white hover:text-panther-gold transition-colors">
                 <Facebook size={20} />
-              </a>
-              <a href="#" className="text-white hover:text-panther-gold transition-colors">
-                <Twitter size={20} />
               </a>
             </div>
           </div>

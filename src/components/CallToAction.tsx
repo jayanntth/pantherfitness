@@ -27,7 +27,7 @@ const CallToAction = ({ size = 'md', className }: CallToActionProps) => {
         )}
       >
         <Phone size={size === 'sm' ? 16 : 20} className="mr-2" />
-        Call for Membership
+        Call for Enquiry
       </Button>
     </a>
   );

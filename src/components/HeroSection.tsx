@@ -19,7 +19,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-black/50 z-10"></div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 h-full flex flex-col justify-center relative z-20">
+      <div className="container mx-auto px-4 h-full flex flex-col justify-center relative z-20 pt-12 sm:pt-0">
         <div className="max-w-3xl">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             THE STRENGTHENING <span className="text-panther-gold">POWER HOUSE</span>

@@ -1,5 +1,5 @@
 
-import { useEffect, useRef } from 'react';
+import { ExternalLink } from 'lucide-react';
 
 interface MapProps {
   src: string;
@@ -8,17 +8,16 @@ interface MapProps {
 
 const Map = ({ src, title }: MapProps) => {
   return (
-    <div className="w-full h-96 rounded-lg overflow-hidden border-2 border-panther-gold/30">
-      <iframe
-        src={src}
-        width="100%"
-        height="100%"
-        style={{ border: 0 }}
-        allowFullScreen={true}
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        title={title}
-      ></iframe>
+    <div className="w-full rounded-lg overflow-hidden border-2 border-panther-gold/30 p-4 bg-black/20">
+      <a 
+        href={src} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="flex items-center text-panther-gold hover:text-panther-gold/80 transition-colors"
+      >
+        <ExternalLink size={20} className="mr-2" />
+        <span>View {title} in Google Maps</span>
+      </a>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import BranchSelector, { Branch } from '@/components/BranchSelector';
 import Map from '@/components/Map';
 import CallToAction from '@/components/CallToAction';
-import { MapPin, Clock, Phone } from 'lucide-react';
+import { MapPin, Clock, Phone, ExternalLink } from 'lucide-react';
 
 const Branches = () => {
   const [selectedBranch, setSelectedBranch] = useState<Branch>('andrahalli');
@@ -17,7 +17,7 @@ const Branches = () => {
       landmarks: 'Near D Group Arch 60ft Road, Opposite Water Tank',
       hours: 'Monday-Saturday: 5:00 AM - 10:30 PM\nSunday: 7:00 AM - 7:30 PM',
       contact: '9900412321',
-      mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0376819053347!2d77.5072093!3d13.032952799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3c936b66e163%3A0xb8ee5557c6d4ee8a!2sPanther%20Fitness!5e0!3m2!1sen!2sin!4v1713215789584!5m2!1sen!2sin',
+      mapUrl: 'https://www.google.com/maps?q=Panther+Fitness+Andrahalli,+Bangalore',
       image: 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80'
     },
     mallathahalli: {
@@ -26,7 +26,7 @@ const Branches = () => {
       landmarks: 'Near HP petrol bunk',
       hours: 'Monday-Saturday: 5:00 AM - 10:30 PM\nSunday: 7:00 AM - 7:30 PM',
       contact: '9900412321',
-      mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9360690225935!2d77.4935663!3d12.9679953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3e6e9f9a8e7d%3A0x9f9810531122558d!2sPanther%20Fitness%20-%20Mallathahalli!5e0!3m2!1sen!2sin!4v1713215945618!5m2!1sen!2sin',
+      mapUrl: 'https://www.google.com/maps?q=Panther+Fitness+Mallathahalli,+Bangalore',
       image: 'https://images.unsplash.com/photo-1571388208497-71bedc66e932?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1644&q=80'
     }
   };
@@ -79,6 +79,15 @@ const Branches = () => {
                       {currentBranch.landmarks && (
                         <p className="text-panther-gold mt-1">{currentBranch.landmarks}</p>
                       )}
+                      <a 
+                        href={currentBranch.mapUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-panther-gold hover:text-panther-gold/80 transition-colors mt-2"
+                      >
+                        <ExternalLink size={16} className="mr-1" />
+                        <span>View on Google Maps</span>
+                      </a>
                     </div>
                   </div>
                   
@@ -107,8 +116,18 @@ const Branches = () => {
               </div>
               
               <div>
-                <h3 className="text-2xl font-bold mb-6">Location Map</h3>
-                <Map src={currentBranch.mapSrc} title={`${currentBranch.name} Map`} />
+                <h3 className="text-2xl font-bold mb-6">About this Branch</h3>
+                <div className="bg-gray-900 p-6 rounded-lg">
+                  <p className="text-gray-300 mb-4">
+                    Our {currentBranch.name} is fully equipped with state-of-the-art fitness machines and staffed by professional trainers to help you achieve your fitness goals.
+                  </p>
+                  <p className="text-gray-300 mb-4">
+                    Whether you're looking to build muscle, lose weight, or simply maintain your fitness, our facilities are designed to cater to all your needs.
+                  </p>
+                  <p className="text-gray-300">
+                    Visit us today and experience the Panther Fitness difference!
+                  </p>
+                </div>
               </div>
             </div>
           </div>

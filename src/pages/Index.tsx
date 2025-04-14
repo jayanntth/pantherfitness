@@ -16,6 +16,9 @@ const Index = () => {
       <main>
         <HeroSection />
         
+        {/* Spacing to ensure hero section location cards are visible on mobile */}
+        <div className="h-16 md:hidden"></div>
+        
         {/* About Section Preview */}
         <section className="section-padding">
           <div className="container mx-auto">

@@ -1,4 +1,3 @@
-
 import { ArrowRight, Dumbbell, Award, Clock, MapPin, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import HeroSection from '@/components/HeroSection';
@@ -6,6 +5,7 @@ import CallToAction from '@/components/CallToAction';
 import EquipmentCard from '@/components/EquipmentCard';
 import ServiceCard from '@/components/ServiceCard';
 import FitnessOptionCard from '@/components/FitnessOptionCard';
+import TestimonialVideos from '@/components/TestimonialVideos';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -80,6 +80,9 @@ const Index = () => {
             </div>
           </div>
         </section>
+        
+        {/* Testimonial Videos Section */}
+        <TestimonialVideos />
         
         {/* Equipment Preview */}
         <section className="section-padding bg-gray-950">

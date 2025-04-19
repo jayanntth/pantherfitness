@@ -14,6 +14,28 @@ const Branches = () => {
   const branchPhotos = {
     andrahalli: [
       {
+        title: "Gym Floor Area",
+        url: "/lovable-uploads/7925377f-ee30-450a-bb61-f2bc97d0be26.png"
+      },
+      {
+        title: "Gym Exterior",
+        url: "/lovable-uploads/1307c593-0449-42d7-86de-997a47a91d6b.png"
+      },
+      {
+        title: "Training Zone",
+        url: "/lovable-uploads/ff7f37fe-7273-4aba-8aa6-2950629577fd.png"
+      },
+      {
+        title: "Fitness Equipment Zone",
+        url: "/lovable-uploads/7b2ac2a3-84cd-47ce-9d38-37cbde38c841.png"
+      },
+      {
+        title: "Free Weights Area",
+        url: "/lovable-uploads/5d22a5f4-9f66-4b5e-870e-07f511984d82.png"
+      }
+    ],
+    mallathahalli: [
+      {
         title: "Cardio Area",
         url: "/lovable-uploads/09accc2e-2ac2-4474-a8ac-5e90520e3d8b.png"
       },
@@ -44,28 +66,6 @@ const Branches = () => {
       {
         title: "Reception Area",
         url: "/lovable-uploads/1358aa13-632a-427e-a598-a46bf2b7178a.png"
-      }
-    ],
-    mallathahalli: [
-      {
-        title: "Gym Floor Area",
-        url: "/lovable-uploads/7925377f-ee30-450a-bb61-f2bc97d0be26.png"
-      },
-      {
-        title: "Gym Exterior",
-        url: "/lovable-uploads/1307c593-0449-42d7-86de-997a47a91d6b.png"
-      },
-      {
-        title: "Training Zone",
-        url: "/lovable-uploads/ff7f37fe-7273-4aba-8aa6-2950629577fd.png"
-      },
-      {
-        title: "Fitness Equipment Zone",
-        url: "/lovable-uploads/7b2ac2a3-84cd-47ce-9d38-37cbde38c841.png"
-      },
-      {
-        title: "Free Weights Area",
-        url: "/lovable-uploads/5d22a5f4-9f66-4b5e-870e-07f511984d82.png"
       }
     ]
   };

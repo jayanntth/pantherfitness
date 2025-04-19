@@ -39,9 +39,9 @@ const HeroSection = () => {
           </div>
           
           {/* Location Quick Links */}
-          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6 pb-4 sm:pb-0">
-            <Link to="/branches" className="group">
-              <div className="bg-black/70 border border-panther-gold/30 p-6 rounded-lg hover:border-panther-gold transition-all">
+          <div className="mt-10 sm:mt-16 flex flex-col sm:flex-row gap-6 pb-4 sm:pb-0">
+            <Link to="/branches" className="group flex-1">
+              <div className="bg-black/70 border border-panther-gold/30 p-6 rounded-lg hover:border-panther-gold transition-all h-full">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-panther-gold transition-colors">Andrahalli Branch</h3>
                 <p className="text-gray-400 mb-4">Near D Group Arch 60ft Road, Opposite Water Tank</p>
                 <p className="text-panther-gold inline-flex items-center">
@@ -50,8 +50,8 @@ const HeroSection = () => {
               </div>
             </Link>
             
-            <Link to="/branches" className="group">
-              <div className="bg-black/70 border border-panther-gold/30 p-6 rounded-lg hover:border-panther-gold transition-all">
+            <Link to="/branches" className="group flex-1">
+              <div className="bg-black/70 border border-panther-gold/30 p-6 rounded-lg hover:border-panther-gold transition-all h-full">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-panther-gold transition-colors">Mallathahalli Branch</h3>
                 <p className="text-gray-400 mb-4">Near HP petrol bunk, Mallathahalli main road</p>
                 <p className="text-panther-gold inline-flex items-center">

@@ -5,10 +5,49 @@ import Footer from '@/components/Footer';
 import BranchSelector, { Branch } from '@/components/BranchSelector';
 import Map from '@/components/Map';
 import CallToAction from '@/components/CallToAction';
+import BranchPhotoCarousel from '@/components/BranchPhotoCarousel';
 import { MapPin, Clock, Phone, ExternalLink } from 'lucide-react';
 
 const Branches = () => {
   const [selectedBranch, setSelectedBranch] = useState<Branch>('andrahalli');
+  
+  const branchPhotos = {
+    andrahalli: [
+      {
+        title: "Cardio Area",
+        url: "/lovable-uploads/09accc2e-2ac2-4474-a8ac-5e90520e3d8b.png"
+      },
+      {
+        title: "Weight Training Area",
+        url: "/lovable-uploads/097b0e26-b824-4eb9-bc22-10f0ddb05d3c.png"
+      },
+      {
+        title: "Free Weights Section",
+        url: "/lovable-uploads/c0a130cc-b080-4fc8-91fc-b08ad04554e7.png"
+      },
+      {
+        title: "Fitness Equipment",
+        url: "/lovable-uploads/80702b36-4f80-4680-abe1-14c79e67cda9.png"
+      },
+      {
+        title: "Training Area",
+        url: "/lovable-uploads/25325965-2804-4bf5-bf3a-bcb131799d56.png"
+      },
+      {
+        title: "Cardio Machines",
+        url: "/lovable-uploads/e1ceee91-a934-4ff1-a639-c6f6763f4f94.png"
+      },
+      {
+        title: "Weight Training Zone",
+        url: "/lovable-uploads/99c3495c-b647-47e7-bc7b-61f16081dbaa.png"
+      },
+      {
+        title: "Reception Area",
+        url: "/lovable-uploads/1358aa13-632a-427e-a598-a46bf2b7178a.png"
+      }
+    ],
+    mallathahalli: []
+  };
   
   const branchInfo = {
     andrahalli: {
@@ -32,6 +71,7 @@ const Branches = () => {
   };
   
   const currentBranch = branchInfo[selectedBranch];
+  const currentBranchPhotos = branchPhotos[selectedBranch];
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -62,11 +102,15 @@ const Branches = () => {
             
             <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
-                <img 
-                  src={currentBranch.image} 
-                  alt={currentBranch.name} 
-                  className="w-full h-96 object-cover rounded-lg shadow-lg"
-                />
+                {currentBranchPhotos && currentBranchPhotos.length > 0 ? (
+                  <BranchPhotoCarousel photos={currentBranchPhotos} />
+                ) : (
+                  <img 
+                    src={currentBranch.image} 
+                    alt={currentBranch.name} 
+                    className="w-full h-96 object-cover rounded-lg shadow-lg"
+                  />
+                )}
                 
                 <div className="mt-8 space-y-4">
                   <h2 className="text-3xl font-bold">{currentBranch.name}</h2>

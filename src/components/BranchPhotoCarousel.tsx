@@ -16,7 +16,7 @@ const BranchPhotoCarousel = ({ photos }: BranchPhotoCarouselProps) => {
   const isMobile = useIsMobile();
   
   return (
-    <Carousel className="w-full">
+    <Carousel className="w-full relative">
       <CarouselContent>
         {photos.map((photo, index) => (
           <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
@@ -32,9 +32,17 @@ const BranchPhotoCarousel = ({ photos }: BranchPhotoCarouselProps) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <div className="hidden md:block">
-        <CarouselPrevious variant="ghost" className="text-panther-gold hover:text-panther-gold/80 hover:bg-black/50" />
-        <CarouselNext variant="ghost" className="text-panther-gold hover:text-panther-gold/80 hover:bg-black/50" />
+      <div className="block">
+        <CarouselPrevious 
+          variant="ghost" 
+          className="text-panther-gold hover:text-panther-gold/80 hover:bg-black/50 absolute left-2 md:-left-12" 
+          size="icon"
+        />
+        <CarouselNext 
+          variant="ghost" 
+          className="text-panther-gold hover:text-panther-gold/80 hover:bg-black/50 absolute right-2 md:-right-12" 
+          size="icon"
+        />
       </div>
     </Carousel>
   );

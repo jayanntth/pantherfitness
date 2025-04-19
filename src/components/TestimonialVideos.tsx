@@ -36,7 +36,7 @@ const TestimonialVideos = () => {
           </p>
         </div>
         
-        <Carousel className="max-w-5xl mx-auto">
+        <Carousel className="max-w-5xl mx-auto relative">
           <CarouselContent>
             {testimonialVideos.map((video) => (
               <CarouselItem key={video.id} className="md:basis-1/1 lg:basis-1/1">
@@ -45,8 +45,8 @@ const TestimonialVideos = () => {
                     <div className="flex flex-col items-center space-y-4">
                       <h3 className="text-xl font-bold text-white">{video.title}</h3>
                       <div className="relative w-full mx-auto" style={{ 
-                        maxWidth: isMobile ? "100%" : "450px",
-                        height: isMobile ? "450px" : "600px" 
+                        maxWidth: "100%",
+                        height: isMobile ? "480px" : "600px" 
                       }}>
                         <iframe 
                           src={video.embedUrl} 
@@ -62,15 +62,19 @@ const TestimonialVideos = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="hidden md:block">
-            <CarouselPrevious variant="ghost" className="text-panther-gold hover:text-panther-gold/80 hover:bg-black/50 -left-16" />
-            <CarouselNext variant="ghost" className="text-panther-gold hover:text-panther-gold/80 hover:bg-black/50 -right-16" />
+          <div className="block">
+            <CarouselPrevious 
+              variant="ghost" 
+              className="text-panther-gold hover:text-panther-gold/80 hover:bg-black/50 absolute left-2 md:-left-16" 
+              size="icon"
+            />
+            <CarouselNext 
+              variant="ghost" 
+              className="text-panther-gold hover:text-panther-gold/80 hover:bg-black/50 absolute right-2 md:-right-16" 
+              size="icon"
+            />
           </div>
         </Carousel>
-        
-        <div className="flex justify-center items-center mt-6 md:hidden">
-          <p className="text-gray-400 text-sm">Swipe to see more stories</p>
-        </div>
       </div>
     </section>
   );

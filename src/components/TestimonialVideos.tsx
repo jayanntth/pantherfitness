@@ -2,6 +2,7 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface TestimonialVideo {
   id: string;
@@ -43,14 +44,16 @@ const TestimonialVideos = () => {
                   <CardContent className="p-4">
                     <div className="flex flex-col items-center space-y-4">
                       <h3 className="text-xl font-bold text-white">{video.title}</h3>
-                      <div className="relative w-full aspect-video">
+                      <div className="relative w-full mx-auto" style={{ 
+                        maxWidth: isMobile ? "100%" : "450px",
+                        height: isMobile ? "450px" : "600px" 
+                      }}>
                         <iframe 
                           src={video.embedUrl} 
                           title={video.title}
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
                           className="absolute top-0 left-0 w-full h-full rounded-md"
-                          style={{ maxHeight: isMobile ? "300px" : "450px" }}
                         ></iframe>
                       </div>
                     </div>

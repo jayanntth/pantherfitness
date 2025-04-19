@@ -1,3 +1,4 @@
+
 import { ArrowRight, Dumbbell, Award, Clock, MapPin, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import HeroSection from '@/components/HeroSection';
@@ -17,7 +18,7 @@ const Index = () => {
         <HeroSection />
         
         {/* Spacing to ensure hero section location cards are visible on mobile */}
-        <div className="h-16 md:hidden"></div>
+        <div className="h-24 md:hidden"></div>
         
         {/* About Section Preview */}
         <section className="section-padding">

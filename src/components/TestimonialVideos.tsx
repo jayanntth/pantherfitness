@@ -1,6 +1,7 @@
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface TestimonialVideo {
   id: string;
@@ -12,16 +13,18 @@ const testimonialVideos: TestimonialVideo[] = [
   {
     id: "video1",
     title: "Client Success Story - Weight Loss Journey",
-    embedUrl: "https://www.youtube.com/embed/your-video-id-1"
+    embedUrl: "https://www.instagram.com/reel/CtqbtTwNBPG/embed"
   },
   {
     id: "video2",
     title: "Transformation at Panther Fitness",
-    embedUrl: "https://www.youtube.com/embed/your-video-id-2"
+    embedUrl: "https://www.instagram.com/reel/DGQiENkzgyQ/embed"
   }
 ];
 
 const TestimonialVideos = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="section-padding bg-gray-950">
       <div className="container mx-auto">
@@ -47,6 +50,7 @@ const TestimonialVideos = () => {
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
                           className="absolute top-0 left-0 w-full h-full rounded-md"
+                          style={{ maxHeight: isMobile ? "300px" : "450px" }}
                         ></iframe>
                       </div>
                     </div>

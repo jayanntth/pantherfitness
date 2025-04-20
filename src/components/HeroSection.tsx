@@ -39,23 +39,23 @@ const HeroSection = () => {
           </div>
           
           {/* Location Quick Links */}
-          <div className="mt-10 sm:mt-16 flex flex-col sm:flex-row gap-6 pb-4 sm:pb-0">
+          <div className="mt-10 sm:mt-16 flex flex-col sm:flex-row gap-4 pb-4 sm:pb-0">
             <Link to="/branches" className="group flex-1 sm:mr-4">
-              <div className="bg-black/70 border border-panther-gold/30 p-4 sm:p-6 rounded-lg hover:border-panther-gold transition-all h-full">
-                <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-panther-gold transition-colors">Andrahalli Branch</h3>
-                <p className="text-gray-400 mb-4 text-sm sm:text-base">Near D Group Arch 60ft Road, Opposite Water Tank</p>
-                <p className="text-panther-gold inline-flex items-center text-sm sm:text-base">
-                  View Details <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
+              <div className="bg-black/70 border border-panther-gold/30 p-3 sm:p-6 rounded-lg hover:border-panther-gold transition-all h-full">
+                <h3 className="text-base sm:text-xl font-bold mb-1 group-hover:text-panther-gold transition-colors">Andrahalli Branch</h3>
+                <p className="text-gray-400 mb-2 text-xs sm:text-base">Near D Group Arch 60ft Road, Opposite Water Tank</p>
+                <p className="text-panther-gold inline-flex items-center text-xs sm:text-base">
+                  View Details <ArrowRight size={14} className="ml-1 transition-transform group-hover:translate-x-1" />
                 </p>
               </div>
             </Link>
             
             <Link to="/branches" className="group flex-1">
-              <div className="bg-black/70 border border-panther-gold/30 p-4 sm:p-6 rounded-lg hover:border-panther-gold transition-all h-full">
-                <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-panther-gold transition-colors">Mallathahalli Branch</h3>
-                <p className="text-gray-400 mb-4 text-sm sm:text-base">Near HP petrol bunk, Mallathahalli main road</p>
-                <p className="text-panther-gold inline-flex items-center text-sm sm:text-base">
-                  View Details <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
+              <div className="bg-black/70 border border-panther-gold/30 p-3 sm:p-6 rounded-lg hover:border-panther-gold transition-all h-full">
+                <h3 className="text-base sm:text-xl font-bold mb-1 group-hover:text-panther-gold transition-colors">Mallathahalli Branch</h3>
+                <p className="text-gray-400 mb-2 text-xs sm:text-base">Near HP petrol bunk, Mallathahalli main road</p>
+                <p className="text-panther-gold inline-flex items-center text-xs sm:text-base">
+                  View Details <ArrowRight size={14} className="ml-1 transition-transform group-hover:translate-x-1" />
                 </p>
               </div>
             </Link>

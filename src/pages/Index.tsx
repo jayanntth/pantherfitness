@@ -1,4 +1,5 @@
-import { ArrowRight, Dumbbell, Award, Clock, MapPin } from 'lucide-react';
+
+import { ArrowRight, Dumbbell, Award, Clock, MapPin, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import HeroSection from '@/components/HeroSection';
 import CallToAction from '@/components/CallToAction';
@@ -6,7 +7,6 @@ import EquipmentCard from '@/components/EquipmentCard';
 import ServiceCard from '@/components/ServiceCard';
 import FitnessOptionCard from '@/components/FitnessOptionCard';
 import TestimonialVideos from '@/components/TestimonialVideos';
-import BeforeAfterSlider from '@/components/BeforeAfterSlider';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -79,24 +79,6 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        
-        {/* Transformation Showcase */}
-        <section className="section-padding bg-gray-950">
-          <div className="container mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Real <span className="text-panther-gold">Results</span></h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                See the amazing transformation of our dedicated members through their fitness journey with us.
-              </p>
-            </div>
-            
-            <BeforeAfterSlider 
-              beforeImage="/lovable-uploads/6257d894-19c4-4f2f-a3d1-c6b35e54774f.png"
-              afterImage="/lovable-uploads/8820aa06-89c7-4663-8b24-fb07cd4076cd.png"
-              caption="The client who lost 7kg and gained so much confidence"
-            />
           </div>
         </section>
         

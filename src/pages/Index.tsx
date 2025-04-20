@@ -93,9 +93,9 @@ const Index = () => {
             </div>
             
             <BeforeAfterSlider 
-              beforeImage="/lovable-uploads/6257d894-19c4-4f2f-a3d1-c6b35e54774f.png"
-              afterImage="/lovable-uploads/8820aa06-89c7-4663-8b24-fb07cd4076cd.png"
-              caption="The client who lost 7kg and gained so much confidence"
+              beforeImage="/lovable-uploads/8820aa06-89c7-4663-8b24-fb07cd4076cd.png"
+              afterImage="/lovable-uploads/6257d894-19c4-4f2f-a3d1-c6b35e54774f.png"
+              clientName="Rahul"
             />
           </div>
         </section>

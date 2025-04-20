@@ -21,7 +21,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-4 h-full flex flex-col justify-center relative z-20 pt-16 sm:pt-0">
         <div className="max-w-3xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
             <span className="inline-block">THE STRENGTHENING</span> <span className="text-panther-gold">POWER HOUSE</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
@@ -40,21 +40,21 @@ const HeroSection = () => {
           
           {/* Location Quick Links */}
           <div className="mt-10 sm:mt-16 flex flex-col sm:flex-row gap-6 pb-4 sm:pb-0">
-            <Link to="/branches" className="group flex-1">
-              <div className="bg-black/70 border border-panther-gold/30 p-6 rounded-lg hover:border-panther-gold transition-all h-full">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-panther-gold transition-colors">Andrahalli Branch</h3>
-                <p className="text-gray-400 mb-4">Near D Group Arch 60ft Road, Opposite Water Tank</p>
-                <p className="text-panther-gold inline-flex items-center">
+            <Link to="/branches" className="group flex-1 sm:mr-4">
+              <div className="bg-black/70 border border-panther-gold/30 p-4 sm:p-6 rounded-lg hover:border-panther-gold transition-all h-full">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-panther-gold transition-colors">Andrahalli Branch</h3>
+                <p className="text-gray-400 mb-4 text-sm sm:text-base">Near D Group Arch 60ft Road, Opposite Water Tank</p>
+                <p className="text-panther-gold inline-flex items-center text-sm sm:text-base">
                   View Details <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
                 </p>
               </div>
             </Link>
             
             <Link to="/branches" className="group flex-1">
-              <div className="bg-black/70 border border-panther-gold/30 p-6 rounded-lg hover:border-panther-gold transition-all h-full">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-panther-gold transition-colors">Mallathahalli Branch</h3>
-                <p className="text-gray-400 mb-4">Near HP petrol bunk, Mallathahalli main road</p>
-                <p className="text-panther-gold inline-flex items-center">
+              <div className="bg-black/70 border border-panther-gold/30 p-4 sm:p-6 rounded-lg hover:border-panther-gold transition-all h-full">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-panther-gold transition-colors">Mallathahalli Branch</h3>
+                <p className="text-gray-400 mb-4 text-sm sm:text-base">Near HP petrol bunk, Mallathahalli main road</p>
+                <p className="text-panther-gold inline-flex items-center text-sm sm:text-base">
                   View Details <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
                 </p>
               </div>
@@ -67,3 +67,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+

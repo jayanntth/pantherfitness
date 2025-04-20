@@ -8,22 +8,33 @@ interface BeforeAfterSliderProps {
   clientName?: string;
 }
 
-const BeforeAfterSlider = ({ beforeImage, afterImage, clientName }: BeforeAfterSliderProps) => {
+const BeforeAfterSlider = ({ beforeImage, afterImage }: BeforeAfterSliderProps) => {
   const [sliderValue, setSliderValue] = useState([50]);
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(0);
-
+  
   useEffect(() => {
     if (containerRef.current) {
       setContainerWidth(containerRef.current.offsetWidth);
     }
   }, []);
 
+  const handleSlide = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+    
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const position = ((x - rect.left) / rect.width) * 100;
+    setSliderValue([Math.min(Math.max(position, 0), 100)]);
+  };
+
   return (
-    <div className="relative w-full max-w-3xl mx-auto">
+    <div className="relative w-full max-w-4xl mx-auto">
       <div 
         ref={containerRef}
-        className="relative h-[500px] overflow-hidden rounded-lg"
+        className="relative h-[400px] md:h-[600px] overflow-hidden rounded-lg cursor-col-resize"
+        onMouseMove={(e) => e.buttons === 1 && handleSlide(e)}
+        onTouchMove={handleSlide}
       >
         {/* Before Image (Full width) */}
         <div 
@@ -65,12 +76,6 @@ const BeforeAfterSlider = ({ beforeImage, afterImage, clientName }: BeforeAfterS
           className="w-full"
         />
       </div>
-
-      {clientName && (
-        <p className="text-center mt-4 text-lg font-semibold">
-          {clientName}'s Transformation
-        </p>
-      )}
     </div>
   );
 };

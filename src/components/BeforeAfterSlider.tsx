@@ -5,31 +5,46 @@ import { Slider } from "@/components/ui/slider";
 interface BeforeAfterSliderProps {
   beforeImage: string;
   afterImage: string;
-  clientName?: string;
+  caption?: string;
 }
 
-const BeforeAfterSlider = ({ beforeImage, afterImage, clientName }: BeforeAfterSliderProps) => {
+const BeforeAfterSlider = ({ beforeImage, afterImage, caption }: BeforeAfterSliderProps) => {
   const [sliderValue, setSliderValue] = useState([50]);
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(0);
-
+  
   useEffect(() => {
     if (containerRef.current) {
       setContainerWidth(containerRef.current.offsetWidth);
     }
   }, []);
 
+  const handleSlide = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+    
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const position = ((x - rect.left) / rect.width) * 100;
+    setSliderValue([Math.min(Math.max(position, 0), 100)]);
+  };
+
   return (
-    <div className="relative w-full max-w-3xl mx-auto">
+    <div className="relative w-full max-w-4xl mx-auto">
       <div 
         ref={containerRef}
-        className="relative h-[500px] overflow-hidden rounded-lg"
+        className="relative aspect-[9/16] overflow-hidden rounded-lg cursor-col-resize"
+        onMouseMove={(e) => e.buttons === 1 && handleSlide(e)}
+        onTouchMove={handleSlide}
       >
         {/* Before Image (Full width) */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${beforeImage})` }}
-        />
+        >
+          <span className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">
+            Before
+          </span>
+        </div>
         
         {/* After Image (Clipped) */}
         <div 
@@ -38,7 +53,11 @@ const BeforeAfterSlider = ({ beforeImage, afterImage, clientName }: BeforeAfterS
             backgroundImage: `url(${afterImage})`,
             clipPath: `inset(0 ${100 - sliderValue[0]}% 0 0)`
           }}
-        />
+        >
+          <span className="absolute top-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">
+            After
+          </span>
+        </div>
 
         {/* Slider Line */}
         <div 
@@ -66,9 +85,9 @@ const BeforeAfterSlider = ({ beforeImage, afterImage, clientName }: BeforeAfterS
         />
       </div>
 
-      {clientName && (
-        <p className="text-center mt-4 text-lg font-semibold">
-          {clientName}'s Transformation
+      {caption && (
+        <p className="text-center mt-4 text-lg text-gray-300 italic">
+          {caption}
         </p>
       )}
     </div>

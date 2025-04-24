@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -9,10 +8,21 @@ import BranchPhotoCarousel from '@/components/BranchPhotoCarousel';
 import { MapPin, Clock, Phone, ExternalLink } from 'lucide-react';
 
 const Branches = () => {
-  const [selectedBranch, setSelectedBranch] = useState<Branch>('andrahalli');
+  const [selectedBranch, setSelectedBranch] = useState<Branch>('andrahalli1');
   
   const branchPhotos = {
-    andrahalli: [
+    andrahalli1: [
+      {
+        title: "New Branch Image 1",
+        url: "/lovable-uploads/branch1_1.jpg"
+      },
+      {
+        title: "New Branch Image 2",
+        url: "/lovable-uploads/branch1_2.jpg"
+      },
+      // Add more images as needed
+    ],
+    andrahalli2: [
       {
         title: "Gym Floor Area",
         url: "/lovable-uploads/7925377f-ee30-450a-bb61-f2bc97d0be26.png"
@@ -71,21 +81,30 @@ const Branches = () => {
   };
   
   const branchInfo = {
-    andrahalli: {
-      name: 'Andrahalli Branch',
-      address: 'CSV Complex, D Group Layout, Andrahalli, Bangalore - 560091',
-      landmarks: 'Near D Group Arch 60ft Road, Opposite Water Tank',
+    andrahalli1: {
+      name: 'Andrahalli Branch 1',
+      address: '#3 & 5, CSV Complex, \'D\' Group Layout, Near \'D\' Group Arch, 60Ft Road, Andrahalli Main Road, Vishvaneedam Post, Bangalore-560091',
+      landmarks: 'Near D Group Arch 60ft Road',
       hours: 'Monday-Saturday: 5:00 AM - 10:30 PM\nSunday: 7:00 AM - 7:30 PM',
-      contact: '9900412321',
-      mapUrl: 'https://www.google.com/maps?q=Panther+Fitness+Andrahalli,+Bangalore',
+      contact: '9731238384',
+      mapUrl: 'https://g.co/kgs/4Jypxtw',
       image: 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80'
+    },
+    andrahalli2: {
+      name: 'Andrahalli Branch 2',
+      address: '#38 2nd/3rd floor MD Complex, Doddanna Layout Andrahalli Main Road, Bangalore-560091',
+      landmarks: 'Near Doddanna Layout',
+      hours: 'Monday-Saturday: 5:00 AM - 10:30 PM\nSunday: 7:00 AM - 7:30 PM',
+      contact: '9071912321',
+      mapUrl: 'https://g.co/kgs/YbX2oNH',
+      image: 'https://images.unsplash.com/photo-1571388208497-71bedc66e932?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1644&q=80'
     },
     mallathahalli: {
       name: 'Mallathahalli Branch',
-      address: '#11 & 12, 1st & 2nd Floor, Gidadakonenahalli, Mallathahalli main road, near HP petrol bunk, Bangalore, India 560091',
+      address: '#11 & 12, 1st & 2nd Floor, Gidadakonenahalli, Mallathahalli main road, near HP petrol bunk, Bangalore - 560091',
       landmarks: 'Near HP petrol bunk',
       hours: 'Monday-Saturday: 5:00 AM - 10:30 PM\nSunday: 7:00 AM - 7:30 PM',
-      contact: '9900412321',
+      contact: '9731238283',
       mapUrl: 'https://www.google.com/maps?q=Panther+Fitness+Mallathahalli,+Bangalore',
       image: 'https://images.unsplash.com/photo-1571388208497-71bedc66e932?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1644&q=80'
     }

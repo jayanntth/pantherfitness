@@ -17,7 +17,7 @@ const CallToAction = ({ size = 'md', className }: CallToActionProps) => {
   };
 
   return (
-    <a href="tel:9900412321">
+    <a href="tel:9731238283">
       <Button 
         variant="default" 
         className={cn(

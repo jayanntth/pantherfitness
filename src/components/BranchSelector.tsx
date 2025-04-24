@@ -1,9 +1,7 @@
 
-import { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { MapPin } from 'lucide-react';
 
-export type Branch = 'andrahalli' | 'mallathahalli';
+export type Branch = 'andrahalli1' | 'andrahalli2' | 'mallathahalli';
 
 interface BranchSelectorProps {
   selectedBranch: Branch;
@@ -12,30 +10,40 @@ interface BranchSelectorProps {
 
 const BranchSelector = ({ selectedBranch, onBranchChange }: BranchSelectorProps) => {
   return (
-    <div className="flex flex-col sm:flex-row bg-gray-900 rounded-lg overflow-hidden">
+    <div className="flex flex-wrap gap-4 justify-center">
       <button
+        onClick={() => onBranchChange('andrahalli1')}
         className={cn(
-          'flex-1 py-4 px-6 flex items-center justify-center font-semibold transition-colors',
-          selectedBranch === 'andrahalli' 
-            ? 'bg-panther-gold text-black' 
-            : 'bg-gray-900 text-white hover:bg-gray-800'
+          'px-6 py-3 rounded-lg font-semibold transition-colors',
+          selectedBranch === 'andrahalli1'
+            ? 'bg-panther-gold text-black'
+            : 'bg-gray-800 text-white hover:bg-gray-700'
         )}
-        onClick={() => onBranchChange('andrahalli')}
       >
-        <MapPin size={20} className="mr-2" />
-        Andrahalli Branch
+        Andrahalli Branch 1
       </button>
       
       <button
+        onClick={() => onBranchChange('andrahalli2')}
         className={cn(
-          'flex-1 py-4 px-6 flex items-center justify-center font-semibold transition-colors',
-          selectedBranch === 'mallathahalli' 
-            ? 'bg-panther-gold text-black' 
-            : 'bg-gray-900 text-white hover:bg-gray-800'
+          'px-6 py-3 rounded-lg font-semibold transition-colors',
+          selectedBranch === 'andrahalli2'
+            ? 'bg-panther-gold text-black'
+            : 'bg-gray-800 text-white hover:bg-gray-700'
         )}
-        onClick={() => onBranchChange('mallathahalli')}
       >
-        <MapPin size={20} className="mr-2" />
+        Andrahalli Branch 2
+      </button>
+
+      <button
+        onClick={() => onBranchChange('mallathahalli')}
+        className={cn(
+          'px-6 py-3 rounded-lg font-semibold transition-colors',
+          selectedBranch === 'mallathahalli'
+            ? 'bg-panther-gold text-black'
+            : 'bg-gray-800 text-white hover:bg-gray-700'
+        )}
+      >
         Mallathahalli Branch
       </button>
     </div>

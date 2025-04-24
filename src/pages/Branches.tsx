@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -13,14 +14,29 @@ const Branches = () => {
   const branchPhotos = {
     andrahalli1: [
       {
-        title: "New Branch Image 1",
-        url: "/lovable-uploads/branch1_1.jpg"
+        title: "Spinning Area",
+        url: "/lovable-uploads/ed678c97-ab41-4255-ad67-60f215f09f07.png"
       },
       {
-        title: "New Branch Image 2",
-        url: "/lovable-uploads/branch1_2.jpg"
+        title: "Gym Exterior",
+        url: "/lovable-uploads/6a3ac816-5946-4b3e-9a31-e2037baea0b5.png"
       },
-      // Add more images as needed
+      {
+        title: "Treadmill Section",
+        url: "/lovable-uploads/850eb30c-4ed5-4be8-9c73-3b27588ce65f.png"
+      },
+      {
+        title: "Free Weights Area",
+        url: "/lovable-uploads/6ecc1499-49f7-44d9-925c-311fb9aaaaf1.png"
+      },
+      {
+        title: "Weight Training Zone",
+        url: "/lovable-uploads/afe0a005-8124-4c2e-9906-9537c9372457.png"
+      },
+      {
+        title: "Functional Training Area",
+        url: "/lovable-uploads/e483ba8b-1713-4891-bef9-b53767af676c.png"
+      }
     ],
     andrahalli2: [
       {

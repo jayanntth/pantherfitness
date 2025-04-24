@@ -54,7 +54,7 @@ const Index = () => {
                   <div className="flex items-start">
                     <MapPin className="text-panther-gold mr-3 mt-1" />
                     <div>
-                      <h3 className="font-semibold mb-1">Two Locations</h3>
+                      <h3 className="font-semibold mb-1">Three Locations</h3>
                       <p className="text-sm text-gray-400">Convenient access</p>
                     </div>
                   </div>
@@ -73,7 +73,7 @@ const Index = () => {
                     className="rounded-lg shadow-lg w-full"
                   />
                   <div className="absolute -bottom-6 -right-6 bg-panther-gold text-black p-4 rounded-lg shadow-lg">
-                    <p className="font-bold text-lg">Two Premium Locations</p>
+                    <p className="font-bold text-lg">Three Premium Locations</p>
                     <p>Andrahalli & Mallathahalli</p>
                   </div>
                 </div>

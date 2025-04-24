@@ -1,4 +1,3 @@
-
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import CallToAction from './CallToAction';
@@ -6,7 +5,6 @@ import CallToAction from './CallToAction';
 const HeroSection = () => {
   return (
     <div className="relative h-screen min-h-[600px] max-h-[800px] bg-black text-white overflow-hidden">
-      {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center sm:bg-center bg-[50%_center] z-0"
         style={{ 
@@ -15,10 +13,8 @@ const HeroSection = () => {
         }}
       />
 
-      {/* Angled Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-black/50 z-10"></div>
 
-      {/* Content */}
       <div className="container mx-auto px-4 h-full flex flex-col justify-center relative z-20 pt-16 sm:pt-0">
         <div className="max-w-3xl">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
@@ -38,19 +34,28 @@ const HeroSection = () => {
             </Link>
           </div>
           
-          {/* Location Quick Links */}
-          <div className="mt-10 sm:mt-16 flex flex-col sm:flex-row gap-4 pb-4 sm:pb-0">
-            <Link to="/branches" className="group flex-1 sm:mr-4">
+          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-4 sm:pb-0">
+            <Link to="/branches" className="group">
               <div className="bg-black/70 border border-panther-gold/30 p-3 sm:p-6 rounded-lg hover:border-panther-gold transition-all h-full">
-                <h3 className="text-base sm:text-xl font-bold mb-1 group-hover:text-panther-gold transition-colors">Andrahalli Branch</h3>
-                <p className="text-gray-400 mb-2 text-xs sm:text-base">Near D Group Arch 60ft Road, Opposite Water Tank</p>
+                <h3 className="text-base sm:text-xl font-bold mb-1 group-hover:text-panther-gold transition-colors">Andrahalli Branch 1</h3>
+                <p className="text-gray-400 mb-2 text-xs sm:text-base">Near D Group Arch 60ft Road, CSV Complex</p>
                 <p className="text-panther-gold inline-flex items-center text-xs sm:text-base">
                   View Details <ArrowRight size={14} className="ml-1 transition-transform group-hover:translate-x-1" />
                 </p>
               </div>
             </Link>
             
-            <Link to="/branches" className="group flex-1">
+            <Link to="/branches" className="group">
+              <div className="bg-black/70 border border-panther-gold/30 p-3 sm:p-6 rounded-lg hover:border-panther-gold transition-all h-full">
+                <h3 className="text-base sm:text-xl font-bold mb-1 group-hover:text-panther-gold transition-colors">Andrahalli Branch 2</h3>
+                <p className="text-gray-400 mb-2 text-xs sm:text-base">MD Complex, Doddanna Layout</p>
+                <p className="text-panther-gold inline-flex items-center text-xs sm:text-base">
+                  View Details <ArrowRight size={14} className="ml-1 transition-transform group-hover:translate-x-1" />
+                </p>
+              </div>
+            </Link>
+            
+            <Link to="/branches" className="group">
               <div className="bg-black/70 border border-panther-gold/30 p-3 sm:p-6 rounded-lg hover:border-panther-gold transition-all h-full">
                 <h3 className="text-base sm:text-xl font-bold mb-1 group-hover:text-panther-gold transition-colors">Mallathahalli Branch</h3>
                 <p className="text-gray-400 mb-2 text-xs sm:text-base">Near HP petrol bunk, Mallathahalli main road</p>
@@ -67,4 +72,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-

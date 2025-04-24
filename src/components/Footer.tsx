@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Phone, MapPin, Clock, Instagram, Facebook } from 'lucide-react';
 
@@ -65,14 +64,12 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-xl font-semibold mb-6 text-panther-gold">Andrahalli Branch</h4>
+            <h4 className="text-xl font-semibold mb-6 text-panther-gold">Andrahalli Branch 1</h4>
             <div className="space-y-4">
               <div className="flex items-start">
                 <MapPin size={20} className="text-panther-gold mr-2 mt-1 flex-shrink-0" />
                 <p className="text-gray-300">
-                  CSV Complex, D Group Layout, Andrahalli, Bangalore - 560091
-                  <br />
-                  <span className="text-sm">Near D Group Arch 60ft Road, Opposite Water Tank</span>
+                  #3 & 5, CSV Complex, 'D' Group Layout, Near 'D' Group Arch, 60Ft Road, Andrahalli Main Road, Vishvaneedam Post, Bangalore-560091
                 </p>
               </div>
               <div className="flex items-start">
@@ -82,6 +79,34 @@ const Footer = () => {
                   <br />
                   Sunday: 7:00 AM - 7:30 PM
                 </p>
+              </div>
+              <div className="flex items-start">
+                <Phone size={20} className="text-panther-gold mr-2 mt-1 flex-shrink-0" />
+                <p className="text-gray-300">9731238384</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-semibold mb-6 text-panther-gold">Andrahalli Branch 2</h4>
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <MapPin size={20} className="text-panther-gold mr-2 mt-1 flex-shrink-0" />
+                <p className="text-gray-300">
+                  #38 2nd/3rd floor MD Complex, Doddanna Layout Andrahalli Main Road, Bangalore-560091
+                </p>
+              </div>
+              <div className="flex items-start">
+                <Clock size={20} className="text-panther-gold mr-2 mt-1 flex-shrink-0" />
+                <p className="text-gray-300">
+                  Monday-Saturday: 5:00 AM - 10:30 PM
+                  <br />
+                  Sunday: 7:00 AM - 7:30 PM
+                </p>
+              </div>
+              <div className="flex items-start">
+                <Phone size={20} className="text-panther-gold mr-2 mt-1 flex-shrink-0" />
+                <p className="text-gray-300">9071912321</p>
               </div>
             </div>
           </div>
@@ -102,6 +127,10 @@ const Footer = () => {
                   <br />
                   Sunday: 7:00 AM - 7:30 PM
                 </p>
+              </div>
+              <div className="flex items-start">
+                <Phone size={20} className="text-panther-gold mr-2 mt-1 flex-shrink-0" />
+                <p className="text-gray-300">9731238283</p>
               </div>
             </div>
           </div>

@@ -14,28 +14,36 @@ const Branches = () => {
   const branchPhotos = {
     andrahalli1: [
       {
-        title: "Spinning Area",
-        url: "/lovable-uploads/ed678c97-ab41-4255-ad67-60f215f09f07.png"
-      },
-      {
-        title: "Gym Exterior",
-        url: "/lovable-uploads/6a3ac816-5946-4b3e-9a31-e2037baea0b5.png"
-      },
-      {
-        title: "Treadmill Section",
-        url: "/lovable-uploads/850eb30c-4ed5-4be8-9c73-3b27588ce65f.png"
-      },
-      {
-        title: "Free Weights Area",
-        url: "/lovable-uploads/6ecc1499-49f7-44d9-925c-311fb9aaaaf1.png"
-      },
-      {
-        title: "Weight Training Zone",
-        url: "/lovable-uploads/afe0a005-8124-4c2e-9906-9537c9372457.png"
+        title: "Gym Floor Area",
+        url: "/lovable-uploads/andrahalli1-gym-floor-1.jpg"
       },
       {
         title: "Functional Training Area",
-        url: "/lovable-uploads/e483ba8b-1713-4891-bef9-b53767af676c.png"
+        url: "/lovable-uploads/andrahalli1-functional-area.jpg"
+      },
+      {
+        title: "Entrance Area",
+        url: "/lovable-uploads/andrahalli1-entrance.jpg"
+      },
+      {
+        title: "Treadmill Section",
+        url: "/lovable-uploads/andrahalli1-treadmills.jpg"
+      },
+      {
+        title: "Cardio Area",
+        url: "/lovable-uploads/andrahalli1-cardio-area.jpg"
+      },
+      {
+        title: "Functional Training Zone",
+        url: "/lovable-uploads/andrahalli1-functional-training.jpg"
+      },
+      {
+        title: "Free Weights Area",
+        url: "/lovable-uploads/andrahalli1-free-weights.jpg"
+      },
+      {
+        title: "Main Gym Floor",
+        url: "/lovable-uploads/andrahalli1-main-floor.jpg"
       }
     ],
     andrahalli2: [
